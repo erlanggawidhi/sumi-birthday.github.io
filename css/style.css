@@ -1,0 +1,231 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url('/img/bg9.jpg'); */
+  background: #343F4F;
+  overflow-y: auto;
+  position: relative;
+  backdrop-filter: blur(0px); /* Tambahkan efek blur */
+  z-index: -1; /* Tetap berada di belakang konten utama */
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+  width: 100%;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 500px; /* Sesuaikan untuk layar kecil */
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+.container {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%; /* Pastikan card menyesuaikan lebar layar */
+  margin: 20px 0; /* Sesuaikan margin untuk layar kecil */
+  animation: fadeIn 2s;
+}
+.card4 {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%; /* Pastikan card menyesuaikan lebar layar */
+  margin: 20px 0; /* Sesuaikan margin untuk layar kecil */
+  animation: fadeIn 2s;
+}
+
+.card h1 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #5c3c1c;
+}
+
+.card p {
+  font-size: 16px; /* Sesuaikan ukuran font */
+  color: #555;
+  text-align: justify;
+  margin: 10px;
+}
+
+.card4 p {
+  text-align: center;
+}
+
+.imgbutton {
+  background: #c15b24;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.imgbutton a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.imgbutton:hover {
+  background: #d09125fe;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar kecil */
+  font-weight: bold;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+h6 {
+  font-weight: 300;
+}
+
+#left,
+#right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Atur ulang ukuran ikon */
+  color: #000;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#left {
+  left: -50px;
+}
+
+#right {
+  right: -50px;
+}
+
+/* Responsive adjustments */
+
+@media  screen and (max-width:1200px) {
+  body {
+    margin: 35px;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    margin: 35px;
+  }
+  .carousel img {
+    width: calc(100% / 2);
+    height: 200px; /* Kurangi tinggi untuk layar kecil */
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    margin: 35px;
+  }
+  .carousel img {
+    width: 100%;
+    height: 500px; /* Sesuaikan tinggi untuk layar lebih kecil */
+    object-fit: cover;
+  }
+
+  .card {
+    padding: 15px;
+    font-size: 14px; /* Ukuran font lebih kecil */
+  }
+
+  .card h1 {
+    font-size: 18px; /* Kurangi ukuran judul */
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  #left,
+  #right {
+    font-size: 16px; /* Sesuaikan ikon navigasi */
+  }
+}

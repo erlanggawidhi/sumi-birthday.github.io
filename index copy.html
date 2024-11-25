@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Umi Birthday</title>
+</head>
+<style>
+  form input[type="text"],
+  form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form button {
+    padding: 10px 20px;
+    background-color: #c15b24;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background: #d09125fe
+  }
+
+  form button:disabled {
+    background-color: #ccc;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <!-- Card Izin -->
+      <div class="card">
+        <h2>PERHATIAN</h2>
+        <h6>Website ini hanya diperuntukkan oleh satu <strong>Orang Spesial</strong> yang bisa mengisi pertanyaan dibawah dengan benar</h6>
+        <form id="authForm">
+          <input type="text" id="name" placeholder="Nama Lengkap" required>
+          <input type="text" id="birthDate" placeholder="Tanggal Lahir" required>
+          <input type="text" id="favcolor" placeholder="Warna Kesukaan" required>
+          <input type="text" id="favanimal" placeholder="Hewan Kesukaan" required>
+          <input type="text" id="bestie" placeholder="Bestie" required>
+          <button type="button" id="submitButton">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const correctName = "sumi fitria";
+    const correctBirthDate = "27 november";
+    const correctFavcolor = ["hitam", "biru", "merah muda"];
+    const correctFavanimal = "kucing";
+    const correctBestie = "sakit perut";
+
+    const submitButton = document.getElementById('submitButton');
+
+    submitButton.addEventListener('click', function () {
+      const name = document.getElementById('name').value.toLowerCase().trim();
+      const birthDate = document.getElementById('birthDate').value.toLowerCase().trim();
+      const favcolor = document.getElementById('favcolor').value.toLowerCase().trim();
+      const favanimal = document.getElementById('favanimal').value.toLowerCase().trim();
+      const bestie = document.getElementById('bestie').value.toLowerCase().trim();
+
+      // Periksa jawaban
+      if (name === correctName && 
+          birthDate === correctBirthDate && 
+          correctFavcolor.includes(favcolor) && 
+          favanimal === correctFavanimal && 
+          bestie === correctBestie) {
+        alert("Cieee.. ada yang makin tua nih wkwkwkk.");
+        window.location.href = "imgslider.html"; // Pindah ke imgslider.html
+      } else {
+        alert("Siapa nih gakenal!");
+      }
+    });
+  </script>
+</body>
+</html>
