@@ -20,7 +20,6 @@ body {
   overflow-y: auto;
   position: relative;
   backdrop-filter: blur(0px); /* Tambahkan efek blur */
-  z-index: -1; /* Tetap berada di belakang konten utama */
 }
 
 .wrapper {
