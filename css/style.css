@@ -17,8 +17,8 @@ body {
   justify-content: center;
   /* background-image: url('img/bg9.jpg'); */
   background-image: url('https://github.com/erlanggawidhi/sumi-birthday.github.io/blob/main/img/bg9.jpg?raw=true');
-  overflow-y: auto;
-  position: relative;
+  /* overflow-y: auto;
+  position: relative; */
   backdrop-filter: blur(0px); /* Tambahkan efek blur */
 }
 
