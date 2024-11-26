@@ -163,10 +163,10 @@ h6 {
   font-weight: 300;
 }
 
-#left,
-#right {
+#left1,
+#right1 {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   font-size: 20px; /* Atur ulang ukuran ikon */
   color: #000;
@@ -174,11 +174,30 @@ h6 {
   z-index: 10;
 }
 
-#left {
+#left1 {
   left: -50px;
 }
 
-#right {
+#right1 {
+  right: -50px;
+}
+
+#left2,
+#right2 {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Atur ulang ukuran ikon */
+  color: #000;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#left2 {
+  left: -50px;
+}
+
+#right2 {
   right: -50px;
 }
 
