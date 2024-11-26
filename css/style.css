@@ -166,7 +166,7 @@ h6 {
 #left1,
 #right1 {
   position: absolute;
-  top: 35%;
+  top: 26%;
   transform: translateY(-50%);
   font-size: 20px; /* Atur ulang ukuran ikon */
   color: #000;
@@ -185,7 +185,7 @@ h6 {
 #left2,
 #right2 {
   position: absolute;
-  top: 80%;
+  top: 65%;
   transform: translateY(-50%);
   font-size: 20px; /* Atur ulang ukuran ikon */
   color: #000;
@@ -242,8 +242,22 @@ h6 {
     font-size: 1.2rem;
   }
 
-  #left,
-  #right {
-    font-size: 16px; /* Sesuaikan ikon navigasi */
+  #left2,
+  #right2 {
+    position: absolute;
+    top: 56%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Atur ulang ukuran ikon */
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  #left2 {
+    left: -50px;
+  }
+  
+  #right2 {
+    right: -50px;
   }
 }
